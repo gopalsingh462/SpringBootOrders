@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: order
+  datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/macyconsumer
+      username: root
+      password: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect 
+server:
+  port: 9092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/monitor"
